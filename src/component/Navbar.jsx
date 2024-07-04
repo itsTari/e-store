@@ -1,6 +1,7 @@
 import { IoMdMenu  } from 'react-icons/io'
 import { BsCart4 } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 function Navbar(){
 return(
     <>
@@ -11,8 +12,8 @@ return(
                     <div className='text-2xl'>Logo</div>
                 </div>
                 <div className="flex items-center w-3/4 justify-end ">
-                    <div className='mr-8'><AiOutlineHome className='text-4xl cursor-pointer'/></div>
-                    <div><BsCart4 className='text-4xl cursor-pointer'/></div>
+                    <Link to='/' className='mr-8'><AiOutlineHome className='text-4xl cursor-pointer'/></Link>
+                    <Link to={`/cart`}><BsCart4 className='text-4xl cursor-pointer'/></Link>
                 </div>
             </div>
         </nav>

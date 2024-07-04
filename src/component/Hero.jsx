@@ -1,4 +1,4 @@
-
+import { FaSearch } from "react-icons/fa";
 function Hero() {
    
   return (
@@ -9,11 +9,14 @@ function Hero() {
             Intro message for the e commerce site
           </h1>
           <div className="flex items-center gap-x-7">
+            <div className="flex w-2/4 relative items-center ">
+            <FaSearch className="text-slate-500 absolute top-3 left-2"/>
             <input
               type="text"
               placeholder="Search for products, brands and categories...."
-              className=" italic w-2/4 px-5 py-2 outline-none text-lg"
+              className=" italic w-full  px-7 py-2 outline-none text-lg"
             />
+            </div>
             <button className="bg-green-500 rounded-xl text-xl px-2 py-3 hover:bg-green-700">
               Shop Now
             </button>

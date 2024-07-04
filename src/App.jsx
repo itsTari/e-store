@@ -1,19 +1,29 @@
 import './App.css'
-import Navbar from './component/Navbar'
-import Hero from './component/Hero'
-import Display from './component/Display'
-import Footer from './component/Footer'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import Main from './layout/Main'
+import HomePage from './Pages/HomePage'
+import AllProduct from './Pages/AllProduct'
+import ProductDetail from './Pages/ProductDetail'
+import NotFound from './Pages/NotFound'
+import CartPage from './Pages/CartPage'
+
 
 function App() {
+  const router = createBrowserRouter(createRoutesFromElements(
+    <Route path='/'element={<Main/>}>
+      <Route index element={<HomePage/>}/>
+      <Route path='/products' element={<AllProduct/>}/>
+      <Route path='/detail/:id' element={<ProductDetail/>}/>
+      <Route path='*' element={<NotFound/>}/>
+      <Route path='/cart' element={<CartPage/>}/>
+    </Route>
+    
+  ));
 
 
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <Display home={true}/>
-      <Footer/>
-        
+    <RouterProvider router={router}/>
     </>
   )
 }
