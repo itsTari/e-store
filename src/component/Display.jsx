@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import {useState, useEffect } from "react"
 import DisplayDiv from "./DisplayDiv"
 function Display({home = false}){
     const[display, setDisplay] = useState([])
