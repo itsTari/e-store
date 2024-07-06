@@ -2,6 +2,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../component/Cart";
+import { toast } from "react-toastify";
 function CartPage() {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
     useContext(CartContext);
@@ -27,6 +28,7 @@ function CartPage() {
                   className="px-4 py-2 bg-orange-500 hover:bg-orange-300 text-white text-xs font-bold uppercase rounded  focus:outline-none"
                   onClick={() => {
                     addToCart(item);
+                    toast.success('Item Already Added')
                   }}
                 >
                   +
