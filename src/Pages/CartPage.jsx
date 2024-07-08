@@ -28,7 +28,7 @@ function CartPage() {
                   className="px-4 py-2 bg-orange-500 hover:bg-orange-300 text-white text-xs font-bold uppercase rounded  focus:outline-none"
                   onClick={() => {
                     addToCart(item);
-                    toast.success('Item Already Added')
+                    // toast.apply('Item Already Added')
                   }}
                 >
                   +

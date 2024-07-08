@@ -6,6 +6,7 @@ import AllProduct from './Pages/AllProduct'
 import ProductDetail from './Pages/ProductDetail'
 import NotFound from './Pages/NotFound'
 import CartPage from './Pages/CartPage'
+import SearchPage from './Pages/SearchPage'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path='/detail/:id' element={<ProductDetail/>}/>
       <Route path='*' element={<NotFound/>}/>
       <Route path='/cart' element={<CartPage/>}/>
+      {/* <Route path='/search' element={<SearchPage/>}/> */}
     </Route>
     
   ));
