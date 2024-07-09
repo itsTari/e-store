@@ -2,7 +2,6 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../component/Cart";
-import { toast } from "react-toastify";
 function CartPage() {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
     useContext(CartContext);

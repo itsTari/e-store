@@ -3,7 +3,7 @@ import { CartContext } from "./Cart"
 import { useContext} from 'react'
 import { toast } from "react-toastify"
 
-function DisplayDiv({product}){
+function DisplayProduct({product}){
     const { cartItems, addToCart } = useContext(CartContext)
 
     return(
@@ -22,4 +22,4 @@ function DisplayDiv({product}){
         </>
     )
 }
-export default DisplayDiv
+export default DisplayProduct

@@ -1,8 +1,8 @@
-import Display from "../component/Display"
+import DisplayProducts from "../component/DisplayProducts"
 function AllProduct() {
   return (
     <>
-      <Display/>
+      <DisplayProducts/>
     </>
   )
 }

@@ -1,14 +1,14 @@
 import {useState, useEffect } from "react"
-import DisplayDiv from "./DisplayDiv"
-function Display({home = false}){
-    const[display, setDisplay] = useState([])
+import DisplayProduct from "./DisplayProduct"
+function DisplayProducts({home = false}){
+    const[products, setProducts] = useState([])
     useEffect(()=>{
         const fetchCategory = async ()=>{
             const apiUrl = home ? 'https://fakestoreapi.com/products?limit=9':'https://fakestoreapi.com/products'
             try{
             const res = await fetch(apiUrl)
             const data = await res.json()
-            setDisplay(data)
+            setProducts(data)
             }catch(err){
                 console.log('Error fetching data', err);
             }
@@ -24,8 +24,8 @@ function Display({home = false}){
                 Products
             </h2>
                 <div className="grid  md:grid-cols-3 gap-6 relative">
-                    {display.map((product)=>
-                        <DisplayDiv key={product.id} product={product}/>
+                    {products.map((product)=>
+                        <DisplayProduct key={product.id} product={product}/>
                     )}
                     {/* <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Image caption</figcaption> */}
                 </div>
@@ -35,4 +35,4 @@ function Display({home = false}){
         </>
     )
 }
-export default Display
+export default DisplayProducts

@@ -2,7 +2,16 @@ import { TiSocialInstagram } from "react-icons/ti";
 import { FaFacebookSquare } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { SlSocialPintarest } from "react-icons/sl";
+import { list } from "postcss";
 function Footer(){
+    const footerListItems =[
+        {id:1, title:'E-commerce'},
+        {id:2, title:'WholeSale Store'},
+        {id:3, title:'Management'},
+        {id:4, title:'Services'},
+        {id:5, title:'Sales Rep'},
+        {id:6, title:'Business'},
+    ]
     return(
         <>
             <footer className="bg-slate-100 px-10 py-6">
@@ -22,28 +31,18 @@ function Footer(){
                     <div className="w-full border-b-2 border-black-300"></div>
                     <div className="flex justify-around ">
                         <ul className="text-slate-800">
-                            <li>E-commerce</li>
-                            <li>Wholesale store</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
+                            { footerListItems.map(list => <li key={list.id}>{list.title}</li> )}
                         </ul>
                         <ul  className="text-slate-800">
-                            <li>E-commerce</li>
-                            <li>Wholesale store</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
+                            {footerListItems.map((list)=>{
+                               return(
+                                <li key={list.id}>{list.title}</li>
+                                ) 
+                             })        
+                            }
                         </ul>
                         <ul  className="text-slate-800">
-                            <li>E-commerce</li>
-                            <li>Wholesale store</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
-                            <li>mangement</li>
+                            {footerListItems.map(list => <li key={list.id}>{list.title}</li>)}
                         </ul>
                     </div>
 

@@ -1,5 +1,4 @@
 import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import SearchPage from "../Pages/SearchPage";
 import { useState, useEffect } from "react";
 function Hero() {
