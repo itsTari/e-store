@@ -8,7 +8,7 @@ import { useContext} from 'react'
 import Sidebar from './Sidebar';
 
 function Navbar(){
-    const cartItems = useContext(CartContext)
+    const {cartItems} = useContext(CartContext)
     const [showSidebar, setShowSidebar] = useState(false)
     let menuRef = useRef()
     const toggle = () => {

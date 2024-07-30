@@ -26,9 +26,8 @@ function Hero() {
 
 const filteredProducts = products.filter((product) => {
     if (
-      product.image.toLowerCase().includes(search) ||
-      product.title.toLowerCase().includes(search) ||
-      product.category.toLowerCase().includes(search)
+    product.title.toLowerCase().includes(search) ||
+    product.category.toLowerCase().includes(search)
     ) {
       return product;
     }else{
@@ -53,7 +52,7 @@ const filteredProducts = products.filter((product) => {
               }}
               type="text"
               placeholder="Search for products, brands and categories...."
-              className=" italic w-full  px-7 py-2 outline-none text-lg"
+              className=" italic w-full z-30  px-7 py-2 outline-none text-lg"
             />
             </div>
             <button className="bg-green-500 rounded-xl text-xl px-2 py-3 hover:bg-green-700">
@@ -62,7 +61,8 @@ const filteredProducts = products.filter((product) => {
           </div>
         </div>
       </section>
-      <SearchPage showModal={showModal} toggle={toggle} filteredProducts={filteredProducts} />
+      <SearchPage search={search} showModal={showModal} toggle={toggle} filteredProducts={filteredProducts} />
+      <div onClick={()=>setShowModal(false)} className={`w-full h-[100svh] bg-black opacity-40 fixed top-0 z-20 ${showModal?"":"hidden"}`}></div>
     </>
   );
 }
