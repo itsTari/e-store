@@ -6,7 +6,7 @@ import AllProduct from './Pages/AllProduct'
 import ProductDetail from './Pages/ProductDetail'
 import NotFound from './Pages/NotFound'
 import CartPage from './Pages/CartPage'
-import SearchPage from './Pages/SearchPage'
+import SearchPage from './component/SearchPage'
 
 
 function App() {

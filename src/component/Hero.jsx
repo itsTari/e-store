@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import SearchPage from "../Pages/SearchPage";
+import SearchPage from "./SearchPage";
 import { useState, useEffect } from "react";
 function Hero() {
   const [showModal, setShowModal] = useState(false)
@@ -30,8 +30,6 @@ const filteredProducts = products.filter((product) => {
     product.category.toLowerCase().includes(search)
     ) {
       return product;
-    }else{
-      console.log('No such item!')
     }
   });
   
@@ -55,9 +53,9 @@ const filteredProducts = products.filter((product) => {
               className=" italic w-full z-30  px-7 py-2 outline-none text-lg"
             />
             </div>
-            <button className="bg-green-500 rounded-xl text-xl px-2 py-3 hover:bg-green-700">
+            {/* <button className="bg-green-500 rounded-xl text-xl px-2 py-3 hover:bg-green-700">
               Shop Now
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

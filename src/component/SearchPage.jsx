@@ -4,10 +4,10 @@ function SearchPage({showModal, search, toggle, filteredProducts}) {
 
   return (
     showModal &&(
-        <div className="p-5 w-1/3 absolute top-80 left-20 bg-white shadow-lg z-30">
-        <div className="display">
+        <div className="w-1/3 absolute top-80 left-20 bg-white shadow-lg z-30">
+        <div className="display p-3">
           {filteredProducts.length==0 && search!="" ? <div>no products found</div> : (search=="" ? <div>type to start searching</div>: (filteredProducts.map((item) => (
-            <Link to={`/detail/${item.id}`} className="p-2" key={item.id}>
+            <Link to={`/detail/${item.id}`} key={item.id} className="p-10">
                 <img
                   src={item.image}
                   alt={item.title}
